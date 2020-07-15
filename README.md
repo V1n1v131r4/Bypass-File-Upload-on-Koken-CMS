@@ -14,24 +14,37 @@ _____________________________________________________________________
 
 The Koken CMS upload restrictions are based on a list of allowed file extensions (withelist), which facilitates bypass through the handling of the HTTP request via Burp.
 
-![1](http://sejalivre.org/poc3/k1.png)
+After you are logged in to Koken CMS, select the "Import Content" option
 
+![1](http://sejalivre.org/poc3/k1.png)
 
 ![1](http://sejalivre.org/poc3/k2.png)
 
 
+As a proof of concept, I created a PHP file with the function `phpinfo()` and saved it with a double extension (image.php.jpg)
+
 ![1](http://sejalivre.org/poc3/k3.png)
 
 
+I imported and forwarded the request to Burp
+
 ![1](http://sejalivre.org/poc3/k4.png)
 
-![1](http://sejalivre.org/poc3/k5.png)
 
+In Burp, I changed the file extension to .php
+
+![1](http://sejalivre.org/poc3/k5.png)
 
 ![1](http://sejalivre.org/poc3/k6.png)
 
 
+Back in the image library, there is a "Download File" button that shows where the malicious file was saved on the server.
+
 ![1](http://sejalivre.org/poc3/k7.png)
 
+
+Just access it and confirm the proof of concept.
+
+In this scenario, an attacker could send a reverse shell, for example, in order to compromise the server.
 
 ![1](http://sejalivre.org/poc3/k8.png)
