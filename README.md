@@ -14,7 +14,7 @@ _____________________________________________________________________
 
 The Koken CMS upload restrictions are based on a list of allowed file extensions (withelist), which facilitates bypass through the handling of the HTTP request via Burp.
 
-After you are logged in to Koken CMS, select the "Import Content" option
+After you are logged in to Koken CMS Admin Panel, select the "Import Content" option
 
 ![1](http://sejalivre.org/poc3/k1.png)
 
@@ -26,12 +26,12 @@ As a proof of concept, I created a PHP file with the function `phpinfo()` and sa
 ![1](http://sejalivre.org/poc3/k3.png)
 
 
-I imported and forwarded the request to Burp
+I selected the `image.php.jpg` file and forwarded the request to Burp
 
 ![1](http://sejalivre.org/poc3/k4.png)
 
 
-In Burp, I changed the file extension to .php
+In Burp, I changed the file extension to `.php`
 
 ![1](http://sejalivre.org/poc3/k5.png)
 
